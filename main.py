@@ -1,6 +1,8 @@
 from subprocess import call
 import os
 
+path1 = "C:\Users\Janci\Desktop\python\project_1"
+
 def path():
     path = str(input('Zadajte cestu k suboru: '))
     return(path)
@@ -39,7 +41,7 @@ def commit(message):
     return()
 
 def main():
-    path1=path()
+    #path1=path()
     cd(path1)
     print """
             Stlac 1 pre init,
