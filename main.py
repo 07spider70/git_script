@@ -11,7 +11,7 @@ def cd(path):
     return()
 
 def mess():
-    message = str(input('Zadaj text. '))
+    message = (str(input('Zadaj text. ')))
     return message
 
 def init():
@@ -35,7 +35,7 @@ def config(name,email):
 
 def commit(message):
     #cal(['git','commit','-m',message])
-    os.system('git commit -m '+ "'" + str(message) + "'")
+    os.system('git commit -m '+ '"' + str(message) + '"')
     return()
 
 def main():
