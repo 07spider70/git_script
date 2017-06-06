@@ -35,7 +35,7 @@ def config(name,email):
 
 def commit(message):
     #cal(['git','commit','-m',message])
-    os.system('git commit -m '+ message)
+    os.system('git commit -m '+ "'" + str(message) + "'")
     return()
 
 def main():
