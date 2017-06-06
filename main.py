@@ -13,7 +13,7 @@ def cd(path):
     return()
 
 def mess():
-    message = (str(input('Zadaj text. ')))
+    message = (str(input('Zadaj text: ')))
     return message
 
 def init():
