@@ -1,13 +1,16 @@
-from subprocess import call
+#from subprocess import call
 import os
+import json
 
-def path():
-    path = str(input('Zadajte cestu k suboru: '))
-    return(path)
+def open_json(data_f='conf.json'):
+    with open(data_f) as data_file:
+        data = json.load(data_file)
+    return(data)
 
-def cd(path):
+def cd(data):
     #call(['cd',path])
-    os.system('cd '+path)
+    path = data['config']['patch']
+    os.system('cd '+ path)
     return()
 
 def mess():
@@ -24,13 +27,16 @@ def add():
     os.system('git add .')
     return()
 
-def config(name,email):
-    name = "'"+str(name)+"'"
-    email = str(email)
+def config(data):
+    #data = open_json()
+    name = "'"+ data['config']['name'] +"'"
+    email = data['config']['email']
     #call(['git','config','--local','config.name',name])
     #call(['git','config','--local','config.email',email])
     os.system('git config --local config.name '+name)
     os.system('git config --local config.email '+email)
+    print('Added ' + name)
+    print('Added ' + email)
     return()
 
 def commit(message):

@@ -2,11 +2,12 @@ from lib import *
 
 path1 = "C:\Users\Janci\Desktop\python\project_1"
 
+data = open_json()
 
 
 def main():
     #path1=path()
-    cd(path1)
+    cd(data)
     print """
             Stlac 1 pre init,
             stlac 2 pre config,
@@ -19,9 +20,7 @@ def main():
     if case == 1:
         init()
     elif case == 2:
-        name = str(input('Meno: '))
-        email = str(input('Email: '))
-        config(name,email)
+        config(data)
     elif case == 3:
         add()
     elif case == 4:
