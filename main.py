@@ -1,44 +1,8 @@
-from subprocess import call
-import os
+from lib import *
 
 path1 = "C:\Users\Janci\Desktop\python\project_1"
 
-def path():
-    path = str(input('Zadajte cestu k suboru: '))
-    return(path)
 
-def cd(path):
-    #call(['cd',path])
-    os.system('cd '+path)
-    return()
-
-def mess():
-    message = (str(input('Zadaj text: ')))
-    return message
-
-def init():
-    #call(['git','init'])
-    os.system('git init')
-    return()
-
-def add():
-    #call(['git','add','.'])
-    os.system('git add .')
-    return()
-
-def config(name,email):
-    name = "'"+str(name)+"'"
-    email = str(email)
-    #call(['git','config','--local','config.name',name])
-    #call(['git','config','--local','config.email',email])
-    os.system('git config --local config.name '+name)
-    os.system('git config --local config.email '+email)
-    return()
-
-def commit(message):
-    #cal(['git','commit','-m',message])
-    os.system('git commit -m '+ '"' + str(message) + '"')
-    return()
 
 def main():
     #path1=path()
@@ -48,7 +12,8 @@ def main():
             stlac 2 pre config,
             stlac 3 pre add,
             stlac 4 pre commit,
-            stlac 5 pre add,commit.
+            stlac5 pre push,
+            stlac 5 pre add, commit, push.
             """
     case = int(input('Cislo: '))
     if case == 1:
@@ -62,10 +27,13 @@ def main():
     elif case == 4:
         mes = mess()
         commit(mes)
-    elif case ==5:
+    elif case == 5:
+        push()
+    elif case ==6:
         add()
         mes = mess()
         commit(mes)
+        push()
 
 if __name__ == '__main__':
     main()
