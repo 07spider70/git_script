@@ -14,7 +14,7 @@ def cd(data):   #change directory according to config file
     return()
 
 def mess(): #set message for commit
-    message = (str(input('Zadaj text: ')))
+    message = (str(input('Zadaj text v uvodzovkach: ')))
     return message
 
 def init(): #inicialize git folder
