@@ -12,8 +12,8 @@ def main():
             stlac 2 pre config,
             stlac 3 pre add,
             stlac 4 pre commit,
-            stlac5 pre push,
-            stlac 5 pre add, commit, push.
+            stlac 5 pre push,
+            stlac 6 pre add, commit, push.
             """
     case = int(input('Cislo: '))
     if case == 1:
